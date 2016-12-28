@@ -1,11 +1,15 @@
 {
-  "name": "project",
+  "name": "nisi",
   "version": "1.0.0",
-  "description": "Your Project",
+  "description": "vcc",
   "private": true,
   "dependencies": {
+    "bower": "^1.8.0",
     "browserify": "^13.1.0",
+    "datatables.net-responsive": "^2.1.1",
+    "datatables.net-responsive-bs": "^2.1.1",
     "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
     "gulp-clean-css": "^2.0.12",
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^3.0.3",
@@ -20,6 +24,5 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "yargs": "^5.0.0"
-  },
-  "devDependencies": {}
+  }
 }

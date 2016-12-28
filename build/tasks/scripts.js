@@ -29,5 +29,5 @@ gulp.task('scripts', function () {
         .pipe(uglify())
         // write sourcemaps
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(env.DIR_WEB + 'assets/scripts'));
+        .pipe(gulp.dest(env.DIR_WEB + '/assets/scripts'));
 });
