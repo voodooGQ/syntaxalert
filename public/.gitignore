@@ -1,1 +1,11 @@
+.htaccess
+wp-config.php
 index.html
+core
+content/plugins
+!content/plugins/.gitkeep
+content/uploads
+!content/plugins/.gitkeep
+content/mu-plugins
+!content/mu-plugins/.gitkeep
+*.log

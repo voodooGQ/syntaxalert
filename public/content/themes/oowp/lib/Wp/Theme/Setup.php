@@ -8,8 +8,6 @@
  */
 namespace Wp\Theme;
 
-use Wp\Recipe\Register as RecipeRegister;
-
 /**
  * Theme Setup Class
  *
@@ -112,7 +110,6 @@ class Setup
      */
     protected function registerCustomPostTypes()
     {
-        RecipeRegister::getInstance();
         return $this;
     }
 
