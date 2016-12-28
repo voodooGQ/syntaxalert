@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Twig Template for the Primary Menu
+ *
+ * @author Shane Smith <voodoogq@gmail.com>
+ * @since 1.0
+ */
+#}
+
+<div class="menu-primary-container">
+    <ul class="menu-primary">
+        {% for item in menu.items %}
+            <li class="menu-primary-item {{ item.classes|raw }}{{ item.is_active ? ' isActive' : '' }}">
+                <a href="{{ item.url }}">{{ item.title|raw }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

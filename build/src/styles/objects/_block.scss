@@ -1,0 +1,71 @@
+.blocks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.blocks_2up {
+  font-size: 0;
+}
+
+.blocks_2up > * {
+  display: block;
+  padding: 20px 40px;
+  font-size: 18px;
+  @include breakpoint(MD) {
+    display: inline-block;
+    width: 50%;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+}
+
+.blocks_2up > *:nth-child(odd) {
+  padding-top: 80px;
+  @include breakpoint(MD) {
+    padding-right: 20px;
+  }
+}
+
+.blocks_2up > *:nth-child(even) {
+  padding-bottom: 80px;
+  @include breakpoint(MD) {
+    padding-left: 20px;
+  }
+}
+
+.blocks_3up {
+  font-size: 0;
+  @include breakpoint(MD) {
+    margin: -15px -10px 0 -10px;
+  }
+}
+
+.blocks_3up > * {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  @include breakpoint(MD) {
+    display: inline-block;
+    width: 33.33%;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+}
+
+.blocks_3up > *:nth-child(odd) {
+  //padding-top: 80px;
+  @include breakpoint(MD) {
+    //padding-right: 20px;
+  }
+}
+
+.blocks_3up > *:nth-child(even) {
+  //padding-bottom: 80px;
+  @include breakpoint(MD) {
+    //padding-left: 20px;
+  }
+}

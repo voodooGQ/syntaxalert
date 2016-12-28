@@ -1,0 +1,39 @@
+//----------------------------------------------------------------------
+// Utility mixins
+//----------------------------------------------------------------------
+
+@mixin isVisuallyHidden() {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin isHidden() {
+  display: none !important;
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@function hslac($color, $alpha) {
+  @if(type-of($color) == "color") {
+    @return hsla(hue($color), saturation($color), lightness($color), $alpha);
+  }
+  @else {
+    @error "You didn't pass a color object";
+  }
+}

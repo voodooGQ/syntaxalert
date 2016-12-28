@@ -1,0 +1,53 @@
+// ----------------------------------------------------------------------------
+//  Utility Styles
+// ----------------------------------------------------------------------------
+.u-desktop {
+  display: none;
+  @include breakpoint(LG) {
+    display: inherit;
+  }
+}
+
+.u-mobile {
+  @include breakpoint(MD) {
+    display: none;
+  }
+}
+
+.u-noDesktop {
+  display: inherit;
+  @include breakpoint(LG) {
+    display: none;
+  }
+}
+
+.u-tabletPlus {
+  display: none;
+  @include breakpoint(MD) {
+    display: inherit;
+  }
+}
+
+.u-center {
+  text-align: center;
+}
+
+.u-clear {
+  clear: both;
+}
+
+.u-floatLeft {
+  float: left;
+}
+
+.u-floatRight {
+  float: right;
+}
+
+.u-floatNone {
+  float: none;
+}
+
+.u-isVisuallyHidden {
+  @include isVisuallyHidden();
+}

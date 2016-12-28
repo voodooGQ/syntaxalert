@@ -1,0 +1,6 @@
+.site-bd {
+  padding: 0 10px ($DESKTOP_FOOTER_HEIGHT + 30) 10px;
+  @include breakpoint(LG) {
+    padding-top: 40px;
+  }
+}

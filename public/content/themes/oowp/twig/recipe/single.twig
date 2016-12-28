@@ -1,0 +1,74 @@
+<h1 class="hdg hdg_1 vr u-center hdg_pink">{{ title|raw }}</h1>
+{% if featured_image_src %}
+    <div class="hero vr">
+        <img src="{{ featured_image_src }}" />
+    </div>
+{% endif %}
+<div class="box">
+    {% if ingredients %}
+        <div class="vr">
+            {% for section in ingredients %}
+                {% if section.title %}
+                    <h3 class="hdg hdg_4 vr_half hdg_yellow">For the {{ section.title }}</h3>
+                {% endif %}
+                {% if section.ingredients %}
+                    <ul class="list-ingredients vr">
+                        {% for item in section.ingredients %}
+                            <li>
+                                {{ item.quantity }} {{ item.range ? " to #{item.range}" : '' }} {{ item.measurement }} {{ item.ingredient }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <hr class="hr vr" />
+    {% endif %}
+    {% if instructions %}
+        <h2 class="hdg hdg_2 vr hdg_pink">Instructions</h2>
+        {% for section in instructions %}
+            {% if section.title %}
+                <h3 class="hdg hdg_4 vr_half hdg_yellow">For the {{ section.title }}</h3>
+            {% endif %}
+            {% if section.instructions %}
+                <div class="userContent vr">
+                    {{ section.instructions|raw }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    <hr class="hr vr" />
+    <div class="recipe-meta">
+        {% if original_author.url or original_author.name %}
+            <div class="author vr_half">
+                <span class="fa fa-user-circle author-icon"></span>Original Author:
+                {% if original_author.url %}
+                    <a href="{{ original_author.url }}" target="_blank">
+                        {{ original_author.name }}
+                    </a>
+                {% elseif original_author.name %}
+                    {{ original_author.name }}
+                {% endif %}
+            </div>
+        {% endif %}
+        <div class="vr_half">
+            <span class="time-icon fa fa-clock-o"></span>
+            <ul class="timeMeta">
+                {% if prep_time %}
+                    <li><span>Prep:</span> {{ prep_time }}</li>
+                {% endif %}
+                {% if inactive_time %}
+                    <li><span>Inactive:</span> {{ inactive_time }}</li>
+                {% endif %}
+                {% if cook_time %}
+                    <li><span>Cook:</span> {{ cook_time }}</li>
+                {% endif %}
+            </ul>
+        </div>
+        {% if yield %}
+            <span class="yield">
+                <span class="fa fa-shopping-basket yield-icon"></span>{{ yield }}
+            </span>
+        {% endif %}
+    </div>
+</div>

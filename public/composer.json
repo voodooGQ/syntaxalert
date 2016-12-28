@@ -1,0 +1,62 @@
+
+{
+  "name": "oowp/theme",
+  "description": "OOWP Skeleton",
+  "license": "GPLv2",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Shane Smith",
+      "email": "voodoogq@gmail.com",
+      "homepage": "http://voodooskull.com"
+    }
+  ],
+  "config": {
+    "preferred-install": "dist",
+    "bin-dir": "bin",
+    "vendor-dir": "content/themes/oowp/lib/vendor"
+  },
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "composer",
+      "url" : "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url" : "https://packagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "johnpbloch/wordpress": "@dev",
+    "twig/twig": "@dev"
+  },
+  "require-dev": {
+    "wpackagist-plugin/debug-bar": "@dev",
+    "wpackagist-plugin/debug-bar-console": "@dev",
+    "wpackagist-plugin/debug-bar-cron": "@dev",
+    "wpackagist-plugin/developer": "@dev",
+    "wpackagist-plugin/log-deprecated-notices": "@dev",
+    "wpackagist-plugin/log-viewer": "@dev",
+    "wpackagist-plugin/ajax-thumbnail-rebuild": "@dev",
+    "wpackagist-plugin/rewrite-rules-inspector": "@dev"
+  },
+  "extra": {
+    "webroot-dir": "../",
+    "webroot-package": "wordpress",
+    "installer-paths": {
+      "content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": {
+      "johnpbloch/wordpress": "core"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Wp\\": "content/themes/oowp/lib/Wp/"
+    }
+  }
+}

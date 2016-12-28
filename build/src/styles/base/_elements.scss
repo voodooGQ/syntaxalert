@@ -1,0 +1,105 @@
+// ----------------------------------------------------------------------
+// Element defaults and resets
+// ----------------------------------------------------------------------
+
+html {
+  font-size: $FONT_SIZE; // root font size
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+body {
+  font: normal 400 $FONT_SIZE/$LINE_HEIGHT $FONT;
+  color: $COLOR_TEXT;
+  background-color: $COLOR_OFF_WHITE;
+  height: 100%;
+  margin: 0;
+  padding:0;
+}
+
+a {
+  color: $COLOR_LINK;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: darken($COLOR_LINK, 25%);
+  }
+}
+
+a,
+button {
+  touch-action: manipulation; // eliminate touch delay
+}
+
+button {
+  margin: 0;
+  border: none;
+  padding: 0;
+  overflow: visible; // prevent hidden in ie 8-11
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  cursor: pointer;
+  background: none;
+  appearance: none;
+  -webkit-font-smoothing: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  display: block;
+}
+
+:focus:not(div):not(svg) { // ie10 applies focus styles to elements that don't have a tabindex
+  outline: none;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 60%;
+}
+
+pre {
+  white-space: pre-line;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+form {
+  position: relative;
+}
+
+textarea {
+  overflow: auto; // remove scrollbar in ie 8-11
+}
+
+svg:not(:root) {
+  overflow: hidden; // overflow isn't hidden in ie 9-11
+}
+
+hr {
+  clear: both;
+  border: none;
+  height: 1px;
+}
+
+.u-isVisuallyHidden {
+  @include isVisuallyHidden();
+}
+
+strong {
+  font-weight: bold;
+}

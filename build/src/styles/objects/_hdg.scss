@@ -1,0 +1,39 @@
+/* ----------------------------------------------------------------------
+ hdg - Heading Styles
+---------------------------------------------------------------------- */
+
+.hdg {
+  font-family: $FONT_ACCENT;
+  text-transform: uppercase;
+}
+
+.hdg_1 {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.hdg_2 {
+  font-size: 33px;
+  line-height: 1;
+}
+
+.hdg_3 {
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.hdg_4 {
+  font-size: 24px;
+  line-height: (26 / 24);
+}
+
+.hdg_5 {
+  font-size: 18px;
+  line-height: (22 / 18);
+}
+
+.hdg_6 {
+  font-size: 16px;
+  line-height: (22 / 18);
+}
+

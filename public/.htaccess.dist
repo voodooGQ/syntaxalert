@@ -1,0 +1,18 @@
+RewriteEngine on
+RewriteBase /
+
+# VCS-friendly file structure
+RewriteCond %{REQUEST_URI} !^core/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ core/$1
+RewriteRule ^(/)?$ core/index.php [L]
+
+# Permalinks
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+AddType image/svg+xml .svg
+AddType image/svg+xml .svgz

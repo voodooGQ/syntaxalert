@@ -1,0 +1,17 @@
+.box {
+  padding: 10px;
+  @include breakpoint(LG) {
+    padding: 0 20px;
+  }
+}
+
+.box-h {
+  padding: 0 20px;
+}
+
+.box-mobile {
+  padding: 0 10px;
+  @include breakpoint(LG) {
+    padding: 0;
+  }
+}

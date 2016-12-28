@@ -1,0 +1,106 @@
+/* ----------------------------------------------------------------------
+ userContent - User entered content Styles
+---------------------------------------------------------------------- */
+
+.userContent {
+  font-family: $FONT;
+  color: $COLOR_TEXT;
+  font-size: $FONT_SIZE;
+}
+
+// Nested all userContent specific selectors within the userContent class.
+
+.userContent {
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $FONT_ACCENT;
+    font-size: inherit;
+    margin: 1em 0 0.5em 0;
+  }
+
+  h2 {
+    font-size: 33px;
+    font-weight: 400;
+  }
+
+  h3 {
+    color: $COLOR_TEXT;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  p {
+    color: $COLOR_TEXT;
+  }
+
+  p + p {
+    margin: 1em 0;
+  }
+
+  ul, ol {
+    margin: 0.5em 0;
+    line-height: 1.45;
+    padding-left: 20px;
+  }
+
+  a {
+    color: $COLOR_LINK
+    &:hover {
+      color: darken($COLOR_LINK, 20%);
+      text-decoration: underline;
+    }
+  }
+
+  ul li {
+    list-style-type: disc;
+  }
+
+  ol li {
+    list-style-type: decimal;
+  }
+
+  li > * {
+    margin: 0;
+  }
+
+  li ul li {
+    list-style-type: circle;
+  }
+
+  li ol li {
+    list-style-type: lower-alpha;
+  }
+
+  li ul, li ol {
+    margin: 0.75em 0;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  blockquote {
+    position: relative;
+    background-color: $COLOR_OFF_WHITE;
+    border: 1px solid $COLOR_GRAY;
+    padding: 35px 45px 49px;
+    font-size: 24px;
+    font-family: $FONT_ACCENT;
+    line-height: 1.2;
+    margin: 1.5em 0;
+    color: $COLOR_GRAY;
+    clear: both; // Not sure about this yet, prevents floated caption can colliding with blockquote
+    @include breakpoint(MD) {
+      margin: 40px 0 45px;
+    }
+  }
+
+  blockquote:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    width: 14px;
+  }
+}

@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Twig Template for the Site Header
+ *
+ * @author Shane Smith <voodoogq@gmail.com>
+ * @since 1.0
+ */
+#}
+
+<header class="site-header">
+    <div class="container">
+        {% if logo %}
+            <div class="logo">
+                <img src="{{ logo }}" />
+            </div>
+        {% endif %}
+        {% if menu.template == 'primary' %}
+            {% include 'menu/primary.twig' %}
+        {% endif %}
+    </div>
+</header>

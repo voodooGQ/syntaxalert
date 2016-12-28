@@ -1,0 +1,91 @@
+/* ----------------------------------------------------------------------
+ grid
+---------------------------------------------------------------------- */
+
+$GUTTER_WIDTH: 40px;
+$COLUMN_COUNT: 12;
+
+.grid {
+  @include clearfix();
+  margin-left: -$GUTTER_WIDTH;
+}
+
+.grid-col + .grid-col {
+  margin-top: $GUTTER_WIDTH;
+  @include breakpoint(MD) {
+    margin-top: 0;
+  }
+}
+
+.grid-col {
+  padding-left: $GUTTER_WIDTH;
+  box-sizing: border-box;
+  vertical-align: top;
+  float: left;
+  width: 100%;
+}
+
+@include breakpoint(MD) {
+  @for $i from 1 through $COLUMN_COUNT {
+
+    .grid-col_#{$i}of#{$COLUMN_COUNT} {
+      width: ($i / $COLUMN_COUNT * 100%);
+    }
+
+    .mix-grid-col_prefix#{$i}of#{$COLUMN_COUNT} {
+      margin-left: ($i / $COLUMN_COUNT * 100%);
+    }
+
+    .mix-grid-col_suffix#{$i}of#{$COLUMN_COUNT} {
+      margin-right: ($i / $COLUMN_COUNT * 100%);
+    }
+  }
+}
+
+// Grid columns for all breakpoints
+@for $i from 1 through $COLUMN_COUNT {
+  .grid-col_sm_#{$i}of#{$COLUMN_COUNT} {
+    width: ($i / $COLUMN_COUNT * 100%);
+
+    + .grid-col { margin-top: 0 !important }
+  }
+}
+
+// Skinny grid (smaller gutters)
+//   Note: if you use grid_skinny on the outer grid of a nest of grids, the interior grids have to be skinny as well
+.grid_skinny {
+  margin-left: -$GUTTER_WIDTH/2;
+
+  .grid-col {
+    padding-left: $GUTTER_WIDTH/2;
+  }
+
+  .grid-col + .grid-col {
+    margin-top: $GUTTER_WIDTH/2;
+
+    @include breakpoint(MD) {
+      margin-top: 0;
+    }
+  }
+}
+
+
+//PADDED GRID
+
+.grid_pad {
+  @include breakpoint(MD) {
+    margin-left: -30px;
+  }
+}
+
+.grid_pad .grid-col {
+  @include breakpoint(MD) {
+    padding-left: 30px;
+  }
+}
+
+.grid_noPad {
+  .grid-col + .grid-col {
+    margin-top: 0;
+  }
+}

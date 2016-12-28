@@ -1,0 +1,46 @@
+// ----------------------------------------------------------------------------
+// Colors
+// ----------------------------------------------------------------------------
+
+$COLOR_TEXT: #585858;
+$COLOR_OFF_WHITE: #e9d4b9;
+$COLOR_GRAY: #333;
+$COLOR_LINK: #a8d;
+
+// ----------------------------------------------------------------------------
+// Site Globals
+// ----------------------------------------------------------------------------
+$FONT:  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$FONT_ACCENT: 'Times New Roman', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+$FONT_SIZE: 18px;
+
+$FONT_WEIGHT_LIGHT: 300;
+$FONT_WEIGHT_REGULAR: 400;
+$FONT_WEIGHT_MEDIUM: 500;
+$FONT_WEIGHT_BOLD: 700;
+
+$LINE_HEIGHT: 1;
+
+$TRANSITION_DURATION_IN: 150ms;
+$TRANSITION_DURATION_OUT: 250ms;
+$TRANSITION_EASING: ease-in-out;
+
+
+// ----------------------------------------------------------------------
+// Viewport Widths
+// ----------------------------------------------------------------------
+
+$WIDTH_SM: 767px;
+$WIDTH_MD: 768px;
+$SITE_MAX_WIDTH: 960px;
+
+// ---------------------------------------------------------------------
+// Elements
+// ---------------------------------------------------------------------
+$DESKTOP_FOOTER_HEIGHT: 150px;
+
+// ----------------------------------------------------------------------
+// Vendor
+// ----------------------------------------------------------------------
+//$fa-font-path:        "../vendor/components-font-awesome/fonts";

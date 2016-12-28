@@ -1,0 +1,32 @@
+
+// ----------------------------------------------------------------------------
+// Mixin - Breakpoint
+//
+// Mixins for Mediaqueries Major Breakpoints
+// ----------------------------------------------------------------------------
+
+$BP_SM: 480px;
+$BP_MD: 768px;
+$BP_LG: $SITE_MAX_WIDTH;
+$breakpoint-subtractor: 1px;
+
+@mixin breakpoint($point) {
+  @if $point == SM {
+    @media (min-width: $BP_SM) { @content; } // 480px
+  }
+  @else if $point == SM_INVERSE {
+    @media (max-width: $BP_SM - $breakpoint-subtractor) { @content; } // UP TO 480px
+  }
+  @else if $point == MD {
+    @media (min-width: $BP_MD) { @content; } // 768px
+  }
+  @else if $point == MD_INVERSE {
+    @media (max-width: $BP_MD - $breakpoint-subtractor) { @content; } // UP TO 768px
+  }
+  @else if $point == LG {
+    @media (min-width: $BP_LG) { @content; } // 1260px
+  }
+  @else if $point == LG_INVERSE {
+    @media (max-width: $BP_LG - $breakpoint-subtractor) { @content; } // UP TO 768px
+  }
+}
