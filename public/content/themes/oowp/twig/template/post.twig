@@ -1,0 +1,11 @@
+{% if featured_image_src %}
+    <div class="hero vr_half">
+        <img src="{{ featured_image_src }}" />
+    </div>
+{% endif %}
+<div class="box">
+    <h1 class="hdg hdg_1 vr">{{ title|raw }}</h1>
+    <div class="userContent">
+        {{ content|raw }}
+    </div>
+</div>
