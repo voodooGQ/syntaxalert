@@ -48,6 +48,6 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-        <div class="container-site">
+        <div class="container container-site">
             <?php get_template_part('partials/globals/site', 'header'); ?>
             <div class="site-bd">

@@ -48,6 +48,7 @@ class Header implements TwigInterface
      */
     public function getTwigData()
     {
+        global $post;
         $twigData = array();
 
         $meta = new Meta($post->ID);

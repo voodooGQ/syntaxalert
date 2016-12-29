@@ -1,1 +1,8 @@
-HOME TEST
+{% if posts %}
+    {% for post in posts %}
+        <a href="{{ post.permalink }}" >
+            <h2 class="hdg hdg_2">{{ post.title }}</h2>
+            <div class="userContent">{{ post.content|raw }}</div>
+        </a>
+    {% endfor %}
+{% endif %}

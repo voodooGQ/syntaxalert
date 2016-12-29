@@ -52,7 +52,10 @@ class Controller implements TwigInterface
         $twigData = array();
 
         if ($post) {
-            $meta = new Meta($post->ID);
+            $meta                   = new Meta($post->ID);
+            $twigData['title']      = $meta->getPostTitle();
+            $twigData['permalink']  = $meta->getPermalink();
+            $twigData['content']    = $meta->getPostContent();
         }
         return $twigData;
     }

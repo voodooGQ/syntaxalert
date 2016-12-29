@@ -6,7 +6,7 @@
  * @since 1.0
  */
 
-namespace Wp\Page;
+namespace Wp\Post;
 
 use Wp\Theme\MetaParent;
 

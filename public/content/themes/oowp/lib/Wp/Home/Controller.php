@@ -50,9 +50,10 @@ class Controller implements TwigInterface
     {
         global $post;
         $twigData = array();
-
+        
         if ($post) {
             $meta = new Meta($post->ID);
+            $twigData['posts'] = $meta->getPosts();
         }
         return $twigData;
     }
