@@ -191,6 +191,17 @@ class MetaParent
      */
     public function getPostContent()
     {
+        return $this->post_content;
+    }
+
+    /**
+     * Get the HTML version of the post content
+     *
+     * @return null|string
+     * @since 1.1
+     */
+    public function getPostContentHtml()
+    {
         return wpautop($this->post_content);
     }
 
