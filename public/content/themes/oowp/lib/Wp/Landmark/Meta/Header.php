@@ -30,15 +30,4 @@ class Header extends MetaParent {
         $menu = new Menu('primary','primary');
         return $menu->getData();
     }
-
-    /**
-     * Get the logo url
-     *
-     * @return string
-     * @since 1.0
-     */
-    public function getLogoUrl()
-    {
-        return get_template_directory_uri() . '/assets/media/images/logo.png';
-    }
 }

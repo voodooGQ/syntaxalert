@@ -1,24 +1,24 @@
 <?php
 /**
- * Site Header Controller
+ * Homepage (Blog Roll) Controller 
  *
  * @author Shane Smith <voodoogq@gmail.com>
  * @since 1.0
  */
 
-namespace Wp\Landmark\Controller;
+namespace Wp\Home;
 
 use Wp\Vendor\Twig\TwigInterface;
-use Wp\Landmark\Meta\Header as Meta;
+use Wp\Theme\Image;
 
 /**
- * Class Header
+ * Class Controller
  *
- * @package Wp\Landmark\Controller
+ * @package Wp\Page
  * @author  Shane Smith <voodoogq@gmail.com>
  * @since   1.0
  */
-class Header implements TwigInterface
+class Controller implements TwigInterface
 {
     /**
      * The Twig Template Name
@@ -27,7 +27,7 @@ class Header implements TwigInterface
      * @type string
      * @since 1.0
      */
-    const TWIG_TEMPLATE_NAME = 'landmark/header';
+    const TWIG_TEMPLATE_NAME = 'template/home.twig';
 
     /**
      * Returns the name of the Twig Template to use
@@ -48,10 +48,12 @@ class Header implements TwigInterface
      */
     public function getTwigData()
     {
+        global $post;
         $twigData = array();
 
-        $meta = new Meta($post->ID);
-        $twigData['menu'] = $meta->getMenu();
+        if ($post) {
+            $meta = new Meta($post->ID);
+        }
         return $twigData;
     }
 }

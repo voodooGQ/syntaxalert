@@ -1,6 +1,6 @@
 <?php
 /**
- * General Page Template Meta
+ * Post Template
  *
  * @author Shane Smith <voodoogq@gmail.com>
  * @since 1.0
@@ -13,7 +13,7 @@ use Wp\Theme\MetaParent;
 /**
  * Class Meta
  *
- * @package Wp\Page
+ * @package Wp\Post
  * @author  Shane Smith <voodoogq@gmail.com>
  * @since   1.0
  */

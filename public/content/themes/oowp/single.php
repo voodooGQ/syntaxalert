@@ -1,12 +1,12 @@
 <?php
 /**
- * General Page Template
+ * Single (Post) Template
  *
  * @author Shane Smith <voodoogq@gmail.com>
  * @since 1.0
  */
 
-use Wp\Page\Controller;
+use Wp\Post\Controller;
 use Wp\Vendor\Twig\Template;
 
 get_header();
