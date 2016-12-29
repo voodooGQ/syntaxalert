@@ -49,7 +49,8 @@ class Footer implements TwigInterface
     public function getTwigData()
     {
         $twigData = array();
-
+        global $post;
+        
         $meta = new Meta($post->ID);
         $twigData['copyright'] = $meta->getCopyright();
         return $twigData;

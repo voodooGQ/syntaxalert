@@ -6,9 +6,9 @@
  * @since 1.0
  */
 ?>
-        <?php
-            get_template_part('partials/globals/site', 'footer');
-            wp_footer();
-        ?>
+            </div><!-- site-bd -->
+            <?php get_template_part('partials/globals/site', 'footer'); ?>
+        </div><!-- .container-site -->
+        <?php wp_footer(); ?>
     </body>
 </html>

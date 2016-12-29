@@ -1,10 +1,11 @@
 .container {
-  max-width: $SITE_MAX_WIDTH;
   width: 100%;
   margin: 0 auto;
 }
 
 .container-site {
+  width: $SITE_MAX_WIDTH;
   min-height:100%;
   position:relative;
+  margin: 0 auto;
 }
