@@ -9,6 +9,11 @@
 	text-align: center;
 }
 
+.footer-inner {
+	border-top: 1px solid $COLOR_GRAY_ALT;
+	padding-top: 40px;
+}
+
 .copyright {
 	font-family: $FONT_ACCENT;
 }

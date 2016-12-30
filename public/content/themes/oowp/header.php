@@ -51,3 +51,4 @@
         <div class="container container-site">
             <?php get_template_part('partials/globals/site', 'header'); ?>
             <div class="site-bd">
+                <div class="body-inner">

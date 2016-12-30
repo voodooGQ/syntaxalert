@@ -1,5 +1,7 @@
 .site-hd { 
 	position: relative;
+  border-bottom: 1px solid $COLOR_GRAY_ALT;
+  padding-bottom: 40px;
 }
 
 .logo {
@@ -10,7 +12,7 @@
 }
 
 .cursor {
-    background: #ccc;
+    background: $COLOR_GRAY_ALT;
     height: 55px;
     width: 35px;
     display: inline-block;
@@ -21,7 +23,7 @@
 
 .container-searchForm {
 	position: absolute;
-  bottom: 0;
+  bottom: 43px;
   width: 100%;
 	text-align: center;
 	z-index: 10;
@@ -42,22 +44,26 @@
 	}
 
 	input {
+		font-size: 18px;
+		font-family: $FONT_MONO;
 		border: 0;
 		border-radius: 10px;
 		height: 40px;
-		width: 250px;
+		width: 200px;
+		padding: 0 40px 0 10px;
 	}
 
   button {
 		font-size: 22px;
 		position: relative;
-		top: 3px;
+		top: 1px;
 		left: -40px;
 	}
   
   .close {
 		position: relative;
     right: 30px;
+		bottom: 1px;
     background: black;
     border-radius: 50%;
     width: 20px;

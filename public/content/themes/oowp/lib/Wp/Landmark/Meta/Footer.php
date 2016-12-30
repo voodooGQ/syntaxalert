@@ -27,6 +27,6 @@ class Footer extends MetaParent {
      */
     public function getCopyright()
     {
-        return '&copy; ' . date('Y') . ' ' . get_bloginfo('name') . '. All Rights Reserved.';
+        return '&copy; ' . date('Y') . ' - <a href="//shaneallensmith.com" target="_blank">Shane Smith</a>. All Rights Reserved.';
     }
 }

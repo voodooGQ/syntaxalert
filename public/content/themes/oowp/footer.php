@@ -6,6 +6,7 @@
  * @since 1.0
  */
 ?>
+                </div><!-- .body-inner -->
             </div><!-- site-bd -->
             <?php get_template_part('partials/globals/site', 'footer'); ?>
         </div><!-- .container-site -->
