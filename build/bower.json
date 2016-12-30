@@ -2,6 +2,9 @@
   "name": "project",
   "version": "1.0",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "prism": "prismjs#^1.6.0",
+    "prism-monokai": "*"
+  },
   "devDependencies": {}
 }

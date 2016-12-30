@@ -23,7 +23,7 @@ vagrantfile:
                         id: syntaxalert
                         hostname: syntaxalert.puphpet
                         network:
-                            private_network: 192.168.56.172
+                            private_network: 192.168.56.173
                             forwarded_port:
                                 vflmnfp_cpd8qx8v8vh2:
                                     host: '7736'
@@ -125,7 +125,7 @@ nginx:
         nxv_as1hy9k85754:
             server_name: syntaxalert.dev
             server_aliases:
-                - www.syntaxalert.com
+                - www.syntaxalert.dev
             www_root: /var/www/html
             listen_port: '80'
             client_max_body_size: 1m
