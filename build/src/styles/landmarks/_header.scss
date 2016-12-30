@@ -1,4 +1,6 @@
-.site-hd { }
+.site-hd { 
+	position: relative;
+}
 
 .logo {
   font-family: $FONT_MONO;
@@ -15,4 +17,52 @@
     position: relative;
     top: 7px;
     opacity: 0;
+}
+
+.container-searchForm {
+	position: absolute;
+  bottom: 0;
+  width: 100%;
+	text-align: center;
+	z-index: 10;
+	&.isHidden {
+		z-index: -10;
+	}
+}
+
+.searchForm {
+	position: relative;
+	left: 25px;
+	opacity: 1;
+	transition: all $TRANSITION_DURATION_OUT $TRANSITION_EASING;
+
+  &.isHidden {
+		left: 275px;
+		opacity: 0;
+	}
+
+	input {
+		border: 0;
+		border-radius: 10px;
+		height: 40px;
+		width: 250px;
+	}
+
+  button {
+		font-size: 22px;
+		position: relative;
+		top: 3px;
+		left: -40px;
+	}
+  
+  .close {
+		position: relative;
+    right: 30px;
+    background: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    padding-top: 1px;
+	}
 }

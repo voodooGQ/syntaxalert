@@ -104,6 +104,12 @@
     width: 14px;
   }
 
+	pre {
+		&:before {
+			background: linear-gradient(darken($COLOR_LINK, 15%), darken($COLOR_LINK, 25%));
+		}
+	}
+
   code {
     font-family: $FONT_MONO;
     font-size: 18px;

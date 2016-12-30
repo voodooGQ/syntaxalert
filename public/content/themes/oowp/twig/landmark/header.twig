@@ -19,8 +19,15 @@
 				<a href="/about" alt="about" title="about" class="fa fa-question-circle-o"></a>
 			</li>
 			<li>
-				<a href="#" alt="Search" title="Search" class="fa fa-search"></a>
+				<a href="#" alt="Search" title="Search" class="fa fa-search js-searchFormTrigger"></a>
 			</li>
 		</ul>
+		<div class="container-searchForm js-searchFormContainer isHidden">
+			<form class="searchForm js-searchForm isHidden">
+				<input type="search" id="s" />
+				<button type="submit" class="fa fa-search"></button> 
+				<a href="#" class="fa fa-close close js-searchFormClose"></a>
+			</form>
+		</div>
     </nav>
 </header>
