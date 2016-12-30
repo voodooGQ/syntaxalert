@@ -1,7 +1,18 @@
 .site-hd { }
+
 .logo {
   font-family: $FONT_MONO;
   text-align: center;
   font-size: 70px;
   letter-spacing: 10px;
+}
+
+.cursor {
+    background: #ccc;
+    height: 55px;
+    width: 35px;
+    display: inline-block;
+    position: relative;
+    top: 7px;
+    opacity: 0;
 }

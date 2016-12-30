@@ -52,7 +52,6 @@ class Header implements TwigInterface
         $twigData = array();
 
         $meta = new Meta($post->ID);
-        $twigData['menu'] = $meta->getMenu();
         return $twigData;
     }
 }

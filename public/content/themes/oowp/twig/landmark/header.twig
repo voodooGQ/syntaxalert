@@ -8,9 +8,19 @@
  */
 #}
 
-<header class="site-header">
-    <div class="logo">SYNTAX ALERT</div>
-    {% if menu.template == 'primary' %}
-        {% include 'menu/primary.twig' %}
-    {% endif %}
+<header class="site-hd">
+    <div class="logo vr">SYNTAX ALERT</div>
+    <nav class="nav">
+		<ul>
+			<li>
+				<a href="/" alt="home" title="home" class="fa fa-newspaper-o"></a>
+			</li>
+			<li>
+				<a href="/about" alt="about" title="about" class="fa fa-question-circle-o"></a>
+			</li>
+			<li>
+				<a href="#" alt="Search" title="Search" class="fa fa-search"></a>
+			</li>
+		</ul>
+    </nav>
 </header>

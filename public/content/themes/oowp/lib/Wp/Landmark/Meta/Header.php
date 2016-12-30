@@ -8,7 +8,6 @@
 
 namespace Wp\Landmark\Meta;
 
-use Wp\Landmark\Controller\Menu;
 use Wp\Theme\MetaParent;
 
 /**
@@ -18,16 +17,4 @@ use Wp\Theme\MetaParent;
  * @author  Shane Smith <voodoogq@gmail.com>
  * @since   1.0
  */
-class Header extends MetaParent {
-    /**
-     * Return the menu for the header
-     *
-     * @return array
-     * @since 1.0
-     */
-    public function getMenu()
-    {
-        $menu = new Menu('primary','primary');
-        return $menu->getData();
-    }
-}
+class Header extends MetaParent {}

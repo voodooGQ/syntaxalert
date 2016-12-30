@@ -9,6 +9,7 @@
 @import 'landmarks/body';
 @import 'landmarks/footer';
 @import 'landmarks/header';
+@import 'landmarks/navigation';
 
 @import 'objects/block';
 @import 'objects/box';
@@ -21,4 +22,4 @@
 @import 'objects/vr';
 
 @import '../vendor/prism-monokai/styles/syntax-highlighting.css';
-//@import '../vendor/components-font-awesome/scss/font-awesome';
+@import '../vendor/font-awesome/scss/font-awesome';
