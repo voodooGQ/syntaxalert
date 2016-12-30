@@ -8,9 +8,6 @@
 
 namespace Wp\Landmark\Meta;
 
-use Wp\Theme\MetaParent;
-use Wp\Landmark\Controller\Menu;
-
 /**
  * Class Footer
  *
@@ -18,7 +15,8 @@ use Wp\Landmark\Controller\Menu;
  * @author  Shane Smith <voodoogq@gmail.com>
  * @since   1.0
  */
-class Footer extends MetaParent {
+class Footer
+{
     /**
      * Get the copyright string
      *

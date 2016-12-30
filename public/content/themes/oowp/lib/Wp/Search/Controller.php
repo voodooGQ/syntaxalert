@@ -1,24 +1,23 @@
 <?php
 /**
- * Site Footer Controller
+ * Search Page Controller
  *
  * @author Shane Smith <voodoogq@gmail.com>
  * @since 1.0
  */
 
-namespace Wp\Landmark\Controller;
+namespace Wp\Search;
 
 use Wp\Vendor\Twig\TwigInterface;
-use Wp\Landmark\Meta\Footer as Meta;
 
 /**
- * Class Footer
+ * Class Controller
  *
- * @package Wp\Landmark\Controller
+ * @package Wp\Search\Controller
  * @author  Shane Smith <voodoogq@gmail.com>
  * @since   1.0
  */
-class Footer implements TwigInterface
+class Controller implements TwigInterface
 {
     /**
      * The Twig Template Name
@@ -27,7 +26,7 @@ class Footer implements TwigInterface
      * @type string
      * @since 1.0
      */
-    const TWIG_TEMPLATE_NAME = 'landmark/footer';
+    const TWIG_TEMPLATE_NAME = 'template/search';
 
     /**
      * Returns the name of the Twig Template to use
@@ -50,7 +49,8 @@ class Footer implements TwigInterface
     {
         $twigData = array();
         $meta = new Meta();
-        $twigData['copyright'] = $meta->getCopyright();
+        $twigData['searchTerm'] = $meta->getSearchTerm();
+        $twigData['posts']      = $meta->getPosts();
         return $twigData;
     }
 }

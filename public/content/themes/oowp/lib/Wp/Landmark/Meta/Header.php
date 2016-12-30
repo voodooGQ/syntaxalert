@@ -8,8 +8,6 @@
 
 namespace Wp\Landmark\Meta;
 
-use Wp\Theme\MetaParent;
-
 /**
  * Class Header
  *
@@ -17,4 +15,4 @@ use Wp\Theme\MetaParent;
  * @author  Shane Smith <voodoogq@gmail.com>
  * @since   1.0
  */
-class Header extends MetaParent {}
+class Header {}

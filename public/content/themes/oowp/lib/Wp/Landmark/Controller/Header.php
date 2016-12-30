@@ -48,10 +48,9 @@ class Header implements TwigInterface
      */
     public function getTwigData()
     {
-        global $post;
         $twigData = array();
-
-        $meta = new Meta($post->ID);
+        $meta = new Meta();
+		$twigData['searchAction'] = home_url('/');
         return $twigData;
     }
 }

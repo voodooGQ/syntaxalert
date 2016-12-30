@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Twig Template for the Site Form
+ *
+ * @author Shane Smith <voodoogq@gmail.com>
+ * @since 1.0
+ */
+#}
+
+<div class="container-searchForm js-searchFormContainer isHidden">
+    <form action="{{ searchAction }}" method="get" role="search" class="searchForm js-searchForm isHidden">
+        <input type="search" id="s" value="" name="s" />
+        <button type="submit" class="fa fa-search"></button> 
+        <a href="#" class="fa fa-close close js-searchFormClose"></a>
+    </form>
+</div>
+
