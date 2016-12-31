@@ -1,1 +1,16 @@
-<div>TEST</div>
+{% if searchTerm %}
+    <h1 class="hdg hdg_1 vr">Search Results for: {{searchTerm}}</h1>
+{% endif %}
+{% if posts %}
+    {% for post in posts %}
+		<div class="vr">
+			<h2 class="hdg hdg_2 vr_half">
+				<a href="{{post.permalink}}">{{ post.title }}</a>
+			</h2>
+			<div class="userContent">
+				{{ post.excerpt|raw }} <a href="{{post.permalink}}">More</a>
+			</div>
+		</div>
+		<hr class="vr" />
+    {% endfor %}
+{% endif %}
