@@ -31,12 +31,12 @@ class Meta extends MetaParent {
         $unconverted = $stripped 
             ? $this->stripCodeBlocks(parent::getPostContent())
             : parent::getPostContent();
-
+        
         $parser = new Parsedown();
-        $parsed = $parser->text(parent::getPostContent());
+        $parsed = $parser->text($unconverted);
         
         return $stripped
-            ? wp_strip_all_tags($this->stripCodeBlocks($parsed), true)
+            ? wp_strip_all_tags($parsed, true)
             : $parsed;
     }
 
@@ -49,7 +49,7 @@ class Meta extends MetaParent {
      */
     public function stripCodeBlocks($content)
     {
-        return preg_replace('/<pre[^>]*>.*?<\/pre>/i', '', $content);
+        return preg_replace("/```[a-z]*\R.*?\R```/s", "", $content);
     }
 
     /**
