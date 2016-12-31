@@ -103,17 +103,24 @@
     left: -1px;
     width: 14px;
   }
+	
+	code {
+    display: inline;
+		background: $COLOR_GRAY_ALT;
+		font-family: $FONT_MONO;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 2px 5px;
+  }
 
 	pre {
 		&:before {
 			background: linear-gradient(darken($COLOR_LINK, 15%), darken($COLOR_LINK, 25%));
 		}
+		code {
+			display: inherit;
+			background: transparent;
+			padding: 20px 0 0 0;
+		}
 	}
-
-  code {
-    font-family: $FONT_MONO;
-    font-size: 18px;
-    line-height: 22px;
-    padding-top: 20px;
-  }
 }

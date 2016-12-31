@@ -1,11 +1,11 @@
 {% if searchTerm %}
-    <h1 class="hdg hdg_1 vr">Search Results for: {{searchTerm}}</h1>
+    <h1 class="hdg hdg_1 vr">Search Results for: {{searchTerm|raw}}</h1>
 {% endif %}
 {% if posts %}
     {% for post in posts %}
 		<div class="vr">
 			<h2 class="hdg hdg_2 vr_half">
-				<a href="{{post.permalink}}">{{ post.title }}</a>
+				<a href="{{post.permalink}}">{{ post.title|raw }}</a>
 			</h2>
 			<div class="userContent">
 				<span class="date">[{{post.date}}]</span> {{ post.excerpt|raw }} <a href="{{post.permalink}}">More</a>
