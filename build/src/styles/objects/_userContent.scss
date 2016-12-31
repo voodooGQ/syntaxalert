@@ -114,9 +114,15 @@
   }
 
 	pre {
+
 		&:before {
 			background: linear-gradient(darken($COLOR_LINK, 15%), darken($COLOR_LINK, 25%));
 		}
+
+		&.language-bash:before {
+			content: 'Bash';
+		}
+
 		code {
 			display: inherit;
 			background: transparent;
