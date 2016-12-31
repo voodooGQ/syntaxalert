@@ -1,8 +1,13 @@
 {% if posts %}
     {% for post in posts %}
-        <a href="{{ post.permalink }}" >
-            <h2 class="hdg hdg_2">{{ post.title }}</h2>
-            <div class="userContent">{{ post.content|raw }}</div>
-        </a>
+		<div class="vr">
+			<h2 class="hdg hdg_2 vr_half">
+				<a href="{{post.permalink}}">{{ post.title }}</a>
+			</h2>
+			<div class="userContent">
+				{{ post.excerpt|raw }} <a href="{{post.permalink}}">More</a>
+			</div>
+		</div>
+		<hr class="vr" />
     {% endfor %}
 {% endif %}

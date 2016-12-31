@@ -46,16 +46,24 @@ class Controller implements TwigInterface
      * @return array
      * @since 1.0
      */
-    public function getTwigData()
+    public function getTwigData($postId = null)
     {
+        $id = null; 
         global $post;
+
+	   	if(!empty($postId)) {
+       		$id = $postId;
+        } else if($post) {
+        	$id = $post->ID;
+        }
         $twigData = array();
 
-        if ($post) {
-            $meta                   = new Meta($post->ID);
+        if ($id) {
+            $meta                   = new Meta($id);
             $twigData['title']      = $meta->getPostTitle();
             $twigData['permalink']  = $meta->getPermalink();
             $twigData['content']    = $meta->getPostContent();
+			$twigData['excerpt']	= $meta->getExcerpt(300);
         }
         return $twigData;
     }

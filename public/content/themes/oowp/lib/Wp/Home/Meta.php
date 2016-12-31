@@ -29,12 +29,10 @@ class Meta extends MetaParent {
         $posts =  get_posts(array(
             'post_status' => 'publish',
         ));
-
         foreach($posts as $post) {
-            $entity = new Post($post->ID);
-            array_push($data, $entity->getTwigData());
+            $entity = new Post();
+            array_push($data, $entity->getTwigData($post->ID));
         }
-
         return $data;
     }
 }
