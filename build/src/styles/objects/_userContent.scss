@@ -122,6 +122,9 @@
 		&.language-bash:before {
 			content: 'Bash';
 		}
+    &.language-vim:before {
+      content: 'Vim';
+    }
 
 		code {
 			display: inherit;
