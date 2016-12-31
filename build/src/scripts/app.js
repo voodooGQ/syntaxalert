@@ -6,7 +6,7 @@ window.$ = window.jQuery = require('jquery');
 var Prism = [];
 Prism['core'] 		= require('../vendor/prism/prism');
 Prism['bash'] 		= require('../vendor/prism/components/prism-bash');
-Prism['JSON'] 		= require('../vendor/prism/components/prism-JSON');
+Prism['json'] 		= require('../vendor/prism/components/prism-json');
 Prism['php']		= require('../vendor/prism/components/prism-php');
 Prism['css']		= require('../vendor/prism/components/prism-css');
 Prism['scss']		= require('../vendor/prism/components/prism-scss');
