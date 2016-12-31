@@ -64,6 +64,7 @@ class Controller implements TwigInterface
             $twigData['permalink']  = $meta->getPermalink();
             $twigData['content']    = $meta->getPostContent();
 			$twigData['excerpt']	= $meta->getExcerpt(300);
+			$twigData['date']		= $meta->getDate('Y.m.d');
         }
         return $twigData;
     }

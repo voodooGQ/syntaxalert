@@ -216,6 +216,17 @@ class MetaParent
         return $this->featured_image_id;
     }
 
+	/**
+	 * Return the post date with the format specified
+	 * 
+	 * @param string $format The format for the date
+	 * @return date
+	 */
+	public function getDate($format)
+	{
+		return get_the_date($format, $this->postID);
+	}
+
     /**
      * Gets the unparsed meta field name.
      *
