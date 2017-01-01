@@ -63,4 +63,25 @@ class Meta extends MetaParent {
     {
         return substr($this->getPostContent(true), 0, $length) . '...';
     }
+
+    /**
+     * Return the tags for the post
+     *
+     * @return array
+     * @since 1.0
+     */
+    public function getTags()
+    {
+        $output = array();
+        $tags = wp_get_post_tags($this->postID);
+        foreach($tags as $tag) {
+            $element = array(
+                'id'    =>  $tag->term_id,
+                'name'  =>  $tag->name,
+                'slug'  =>  $tag->slug,
+            );
+            array_push($output, $element);
+        }
+        return $output;
+    }
 }

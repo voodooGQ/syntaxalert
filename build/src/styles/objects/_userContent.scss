@@ -7,7 +7,6 @@
   font-family: $FONT;
   color: $COLOR_TEXT;
   font-size: $FONT_SIZE;
-  padding-bottom: 40px;
 }
 
 // Nested all userContent specific selectors within the userContent class.
@@ -34,6 +33,11 @@
   p {
     color: $COLOR_TEXT;
   }
+
+	*:last-child {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
 
   > * + * {
     margin-top: 1.50em;
