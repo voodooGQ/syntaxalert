@@ -15,7 +15,7 @@
 .tags a {
     margin-left:20px;
     padding:0 10px 0 12px;
-    background:$COLOR_LINK;
+    background:$COLOR_TAG;
     color:$COLOR_BGD;
     text-decoration:none;
     -moz-border-radius-bottomright:4px;
@@ -34,7 +34,7 @@
     left:-12px;
     width:0;
     height:0;
-    border-color:transparent $COLOR_LINK transparent transparent;
+    border-color:transparent $COLOR_TAG transparent transparent;
     border-style:solid;
     border-width:12px 12px 12px 0;        
 }
@@ -51,15 +51,15 @@
     -webkit-border-radius:2px;
     border-radius:2px;
     background:$COLOR_BGD;
-    -moz-box-shadow:-1px -1px 2px darken($COLOR_LINK, 20%);
-    -webkit-box-shadow:-1px -1px 2px darken($COLOR_LINK, 20%);
-    box-shadow:-1px -1px 2px darken($COLOR_LINK, 20%);
+    -moz-box-shadow:-1px -1px 2px darken($COLOR_TAG, 20%);
+    -webkit-box-shadow:-1px -1px 2px darken($COLOR_TAG, 20%);
+    box-shadow:-1px -1px 2px darken($COLOR_TAG, 20%);
 }
 
 .tags a:hover{
-		background:darken($COLOR_LINK, 40%);
+		background:darken($COLOR_TAG, 20%);
 }    
 
 .tags a:hover:before{
-		border-color:transparent darken($COLOR_LINK, 40%) transparent transparent;
+		border-color:transparent darken($COLOR_TAG, 20%) transparent transparent;
 }
