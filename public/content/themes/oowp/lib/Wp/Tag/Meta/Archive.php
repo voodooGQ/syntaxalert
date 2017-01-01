@@ -26,8 +26,16 @@ class Archive extends MetaParent {
      */
     public function getPosts() {
         $data = array();
+        $tag = get_queried_object();
         $posts =  get_posts(array(
-            'post_status' => 'publish',
+            'post_status'   => 'publish',
+            'tax_query'      => array(
+                array(
+                    'taxonomy'  => 'post_tag',
+                    'field'     => 'slug',
+                    'terms'     => $tag->slug
+                )
+            )
         ));
         foreach($posts as $post) {
             $entity = new Post();
