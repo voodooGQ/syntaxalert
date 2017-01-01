@@ -10,7 +10,7 @@
 			{% if post.tags %}
 				<ul class="tags vr">
 					{% for tag in post.tags %}
-						<li><a href="#" class="tag">{{ tag.name }}</a></li>
+						<li><a href="{{ tag.url }}" class="tag">{{ tag.name }}</a></li>
 					{% endfor %}
 				</ul>
 			{% endif %}

@@ -299,6 +299,10 @@ class Setup
             $sep = ' - ';
         }
 
+        if(is_tag()) {
+            $title = 'Articles tagged with "' . trim($title) . '"';
+        }
+
         if (is_feed()) {
             return $title;
         }

@@ -79,6 +79,7 @@ class Meta extends MetaParent {
                 'id'    =>  $tag->term_id,
                 'name'  =>  $tag->name,
                 'slug'  =>  $tag->slug,
+                'url'   =>  get_tag_link($tag->term_id),
             );
             array_push($output, $element);
         }
