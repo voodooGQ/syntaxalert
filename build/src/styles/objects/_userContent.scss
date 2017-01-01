@@ -113,7 +113,11 @@
     padding: 2px 5px;
   }
 
-	pre {
+  code[class*=language-], pre[class*=language-] {
+    max-height: inherit;
+  } 
+
+  pre {
 
 		&:before {
 			background: linear-gradient(darken($COLOR_LINK, 15%), darken($COLOR_LINK, 25%));
