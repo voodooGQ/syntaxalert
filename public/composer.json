@@ -31,7 +31,7 @@
     "php": ">=5.6",
     "johnpbloch/wordpress": "@dev",
     "twig/twig": "@dev",
-    "erusev/parsedown": "@dev"
+    "erusev/parsedown": "@dev",
     "wpackagist-plugin/wordpress-seo": "@dev"
   },
   "require-dev": {
