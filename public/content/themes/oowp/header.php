@@ -36,7 +36,7 @@
         <meta name="theme-color" content="#ffffff">
 
         <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
-
+		<link rel="alternate" href="http://syntaxalert.com" hreflang="en-us" />
         <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/assets/media/images/logo.png" />
         <meta property="og:title" content="<?php wp_title(); ?>" />
 
