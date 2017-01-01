@@ -27,7 +27,8 @@ class Meta extends MetaParent {
     public function getPosts() {
         $data = array();
         $posts =  get_posts(array(
-            'post_status' => 'publish',
+            'post_status'       => 'publish',
+            'posts_per_page'    => -1
         ));
         foreach($posts as $post) {
             $entity = new Post();

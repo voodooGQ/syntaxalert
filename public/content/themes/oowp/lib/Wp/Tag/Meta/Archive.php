@@ -28,8 +28,9 @@ class Archive extends MetaParent {
         $data = array();
         $tag = get_queried_object();
         $posts =  get_posts(array(
-            'post_status'   => 'publish',
-            'tax_query'      => array(
+            'post_status'       => 'publish',
+            'posts_per_page'    => -1,
+            'tax_query'         => array(
                 array(
                     'taxonomy'  => 'post_tag',
                     'field'     => 'slug',
