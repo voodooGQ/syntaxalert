@@ -9,3 +9,5 @@ content/uploads
 content/mu-plugins
 !content/mu-plugins/.gitkeep
 *.log
+cleaner.php
+export.txt
