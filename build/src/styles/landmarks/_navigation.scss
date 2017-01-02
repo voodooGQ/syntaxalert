@@ -4,9 +4,69 @@
 
   ul {
     list-style: none;
+    opacity: 1;
+    transition: all $TRANSITION_DURATION_OUT $TRANSITION_EASING;
+
+    &.isHidden {
+      opacity: 0;
+    }
+
     li {
       display: inline-block;
       margin: 0 15px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: $COLOR_TEXT;
+      overflow: hidden;
+
+      .icon {
+        @extend .fa;
+        position: relative;
+        color: $COLOR_BGD;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .icon-home {
+        @extend .fa-newspaper-o;
+        font-size: 34px !important;
+        top: 4px;
+        left: -1px;
+      }
+
+      .icon-about {
+        @extend .fa-question-circle-o;
+        font-size: 45px !important;
+        top: 7px;
+      }
+
+      .icon-search {
+        @extend .fa-search;
+        font-size: 36px !important;
+        top: 2px;
+      }
+
+      .icon-github {
+        @extend .fa-github;
+        font-size: 47px !important;
+        top: 7px;
+      }
+
+      .icon-email {
+        @extend .fa-envelope;
+        font-size: 36px !important;
+        top: 4px;
+      }
+
+      &:hover {
+        transition: all $TRANSITION_DURATION_OUT $TRANSITION_EASING;
+        background: $COLOR_LINK;
+        .icon {
+          color: $COLOR_BGD;
+        }
+      }
     }
   }
 }

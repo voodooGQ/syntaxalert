@@ -102,6 +102,7 @@ proto.setupHandlers = function () {
  * @since 1.0
  */
 proto.createChildren = function () {
+	this.$navList = this.$element.siblings('ul');
     this.$form = this.$element.find('.' + FORM_SELECTOR);
     this.$trigger = $('body').find('.' + TRIGGER_SELECTOR);
     this.$close = this.$form.find('.' + CLOSE_SELECTOR);
@@ -153,6 +154,7 @@ proto.onClick = function(event) {
     event.preventDefault();
     this.$element.toggleClass(HIDDEN_SELECTOR);
     this.$form.toggleClass(HIDDEN_SELECTOR);
+	this.$navList.toggleClass(HIDDEN_SELECTOR);
     return this;
 };
 
