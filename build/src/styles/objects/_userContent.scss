@@ -134,6 +134,9 @@
     &.language-vim:before {
       content: 'Vim';
     }
+		&.language-nginx:before {
+			content: 'Nginx';
+		}
 
 		code {
 			display: inherit;

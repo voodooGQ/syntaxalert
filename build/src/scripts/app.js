@@ -13,7 +13,7 @@ Prism['scss']		= require('../vendor/prism/components/prism-scss');
 Prism['sass']		= require('../vendor/prism/components/prism-sass');
 Prism['ruby']		= require('../vendor/prism/components/prism-ruby');
 Prism['vim']        = require('../vendor/prism/components/prism-vim');
-
+Prism['nginx']		= require('../vendor/prism/components/prism-nginx');
 var SearchFormView = require('./views/SearchForm');
 
 var $searchForm = $('.js-searchFormContainer');
