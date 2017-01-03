@@ -128,6 +128,7 @@
   } 
 
   pre {
+		margin-top: 1em;
 
 		&:before {
 			background: linear-gradient(darken($COLOR_LINK, 15%), darken($COLOR_LINK, 25%));
