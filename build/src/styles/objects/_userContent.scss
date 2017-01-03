@@ -44,7 +44,6 @@
  }
 
   ul, ol {
-    margin: 0.5em 0;
     line-height: 1.45;
     padding-left: 20px;
   }
@@ -59,10 +58,16 @@
 
   ul li {
     list-style-type: disc;
+		+ li {
+			margin-top: 0.5em;
+		}
   }
 
   ol li {
     list-style-type: decimal;
+		+ li {
+			margin-top: 0.5em;
+		}
   }
 
   li > * {
