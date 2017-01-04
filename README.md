@@ -1,4 +1,4 @@
-# Website for NicoleSippolaMassage.com
+# Website for syntaxalert.com
 Authored by [Shane Smith](https://github.com/voodooGQ) 
 
 ## Setup
