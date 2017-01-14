@@ -113,7 +113,7 @@
     left: -1px;
     width: 14px;
   }
-	
+
 	code {
     display: inline;
 		background: $COLOR_GRAY_ALT;
@@ -125,7 +125,7 @@
 
   code[class*=language-], pre[class*=language-] {
     max-height: inherit;
-  } 
+  }
 
   pre {
 		margin-top: 1em;
@@ -134,6 +134,9 @@
 			background: linear-gradient(darken($COLOR_LINK, 15%), darken($COLOR_LINK, 25%));
 		}
 
+    &.language-ruby:before {
+      content: 'Ruby/Rails';
+    }
 		&.language-bash:before {
 			content: 'Bash';
 		}
