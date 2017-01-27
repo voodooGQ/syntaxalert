@@ -146,6 +146,9 @@
 		&.language-nginx:before {
 			content: 'Nginx';
 		}
+    &.language-json:before {
+      content: 'JSON';
+    }
 
 		code {
 			display: inherit;
