@@ -16,7 +16,6 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: $FONT_ACCENT;
     font-size: inherit;
-    margin: 1em 0 0.5em 0;
   }
 
   h2 {
@@ -32,6 +31,7 @@
 
   p {
     color: $COLOR_TEXT;
+    line-height: 1.6;
   }
 
 	*:last-child {
@@ -40,7 +40,7 @@
 	}
 
   > * + * {
-    margin-top: 1.50em;
+    margin-top: 1em;
  }
 
   ul, ol {
