@@ -14,7 +14,7 @@ Prism['sass']       = require('../vendor/prism/components/prism-sass');
 Prism['ruby']       = require('../vendor/prism/components/prism-ruby');
 Prism['vim']        = require('../vendor/prism/components/prism-vim');
 Prism['nginx']      = require('../vendor/prism/components/prism-nginx');
-Prism['yaml']       = require('../vendor/prism/components/prism-nginx');
+Prism['yaml']       = require('../vendor/prism/components/prism-yaml');
 
 var SearchFormView = require('./views/SearchForm');
 
