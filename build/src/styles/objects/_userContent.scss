@@ -34,10 +34,10 @@
     line-height: 1.6;
   }
 
-	*:last-child {
-		padding-bottom: 0;
-		margin-bottom: 0;
-	}
+  *:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 
   > * + * {
     margin-top: 1em;
@@ -58,16 +58,16 @@
 
   ul li {
     list-style-type: disc;
-		+ li {
-			margin-top: 0.5em;
-		}
+    + li {
+      margin-top: 0.5em;
+    }
   }
 
   ol li {
     list-style-type: decimal;
-		+ li {
-			margin-top: 0.5em;
-		}
+    + li {
+      margin-top: 0.5em;
+    }
   }
 
   li > * {
@@ -114,10 +114,10 @@
     width: 14px;
   }
 
-	code {
+  code {
     display: inline;
-		background: $COLOR_GRAY_ALT;
-		font-family: $FONT_MONO;
+    background: $COLOR_GRAY_ALT;
+    font-family: $FONT_MONO;
     font-size: 18px;
     line-height: 22px;
     padding: 2px 5px;
@@ -128,32 +128,36 @@
   }
 
   pre {
-		margin-top: 1em;
+    margin-top: 1em;
 
-		&:before {
-			background: linear-gradient(darken($COLOR_LINK, 15%), darken($COLOR_LINK, 25%));
-		}
+    &:before {
+      background: linear-gradient(darken($COLOR_LINK, 15%), darken($COLOR_LINK, 25%));
+    }
 
     &.language-ruby:before {
       content: 'Ruby / Rails';
     }
-		&.language-bash:before {
-			content: 'Bash';
-		}
+    &.language-bash:before {
+      content: 'Bash';
+    }
     &.language-vim:before {
       content: 'Vim';
     }
-		&.language-nginx:before {
-			content: 'Nginx';
-		}
+    &.language-nginx:before {
+      content: 'Nginx';
+    }
     &.language-json:before {
       content: 'JSON';
     }
 
-		code {
-			display: inherit;
-			background: transparent;
-			padding: 20px 0 0 0;
-		}
-	}
+    &.languages-yaml:before {
+      content: "YAML"
+    }
+
+    code {
+      display: inherit;
+      background: transparent;
+      padding: 20px 0 0 0;
+    }
+  }
 }
